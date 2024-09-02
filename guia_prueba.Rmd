@@ -1,0 +1,98 @@
+---
+title: "vaccineff - Prueba de usuario #3"
+author: "David Santiago Quevedo"
+date: "2024-09-03"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introducción
+
+Bienvenido/a a la tercera prueba de usuario de  `vaccineff`. Su contribución
+durante esta prueba es muy importante para el equipo de desarrollo del paquete.
+`vaccineff` es un paquete `R` con herramientas para calcular la efectividad
+vacunal ($VE$ por sus siglas en inglés), y métricas asociadas a la vacunación.
+Durante los últimos meses, hemos refactorizado el paquete para precisar
+los algoritmos de estimación y mejorar la experiencia de usuario, reduciendo la
+cantidad de pasos que conducen a estimar la $VE$.  Esta prueba de usuario esta 
+diseñada para evaluar la funcionalidad, usabilidad y documentación del 
+paquete, así como detectar errores provenientes del proceso de refactorización.
+
+## Instrucciones
+
+Para iniciar por favor cargue el paquete y el conjunto de datos de pruebas 
+ejecutando los comandos que se muestran a continuación.
+
+```{r}
+library("vaccineff")
+data(cohortdata)
+head(cohortdata)
+```
+
+Este tabla contiene información de una epidemia simulada ocurrida en 2044 
+sobre una población hipotética, compuesta por 100.000 habitantes, que recibió 
+dos dosis de una vacuna para disminuir el riesgo de muerte por una enfermedad
+respiratoria viral. Sobre esta población se realizó seguimiento por 1 año,
+entre el 1 de enero y 31 de diciembre de 2044.
+
+En el conjunto de datos se presenta la información desagregada de primera y
+segunda dosis (`vaccine_date1`, `vaccine_date2`, `vaccine1` y `vaccine1`)
+para cada uno de los participantes, junto con información demográfica
+relevante (`sex` y `age`). Todos los participantes tienen asignado un `id`
+anónimo, como es usual en este tipo de estudios. Adicionalmente, se presentan
+las fechas de dos desenlaces, muerte asociada a la enfermidad respiratoria
+en cuestión (`death_date`) y muerte por otras causas `death_other_causes`.
+
+### Objetivos
+
+Su tarea es estimar la $VE$ de la segunda dosis aplicada frente a muerte por
+la enfermedad respiratoria y analizar los resultados.
+En su estimación debe desarrollar las siguientes dos estrategias: 
+
+1. Estimación directa sin emparejamiento
+
+2. Estimación con emparejamiento para reducción de posibles sesgos
+observacionales.
+
+Por favor utilice la documentación del paquete para guiarse en ambas
+estimaciones. Para cargar la viñeta principal, ejecute en su consola el 
+siguiente comando.
+
+```{r}
+vignette("vaccineff")
+```
+
+En el panel inferior derechó de su consola de *Rstudio* aparecerá un documento
+que lo guiará paso a paso en esta labor. Recuerde que también puede acceder a
+la documentación de cada función haciendo uso de la convención
+`?<nombre de la función>`.
+
+```{r}
+?make_vaccineff_data
+```
+
+Contacte al instructor de la prueba si ha tenido problemas con la instalación
+la carga del paquete o la ejecución de alguna función.
+
+### Desarrollo de la prueba
+
+Para el desarrollo de esta prueba cuenta con 45 minutos a 1 hora.
+
+### Discusión
+Al finalizar la etapa de desarrollo, el instructor guiará la discusión de
+resultados. Los participantes socializarán brevemente los hallazgos, y los
+desafíos y preguntas surgidas en la ejecución.
+
+### Encuesta y retroalimentación
+Al finalizar, por favor tome 10 minutos para completar la encuesta
+accedientdo al link indicado.
+
+También recomendamos visitar el repositorio en Guthub del paquete y marcar
+como favorito para estar atento a nuevos releases y potencialmente contribuir
+en el desarrollo del mismo. Epiverse-trace es una comunidad que busca la
+constante comunicación entre equipos de desarrollo y usuarios.
+
+
