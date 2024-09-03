@@ -17,13 +17,13 @@ durante esta prueba es muy importante para el equipo de desarrollo del paquete.
 vacunal ($VE$ por sus siglas en inglés), y métricas asociadas a la vacunación.
 Durante los últimos meses, hemos refactorizado el paquete para precisar
 los algoritmos de estimación y mejorar la experiencia del usuario, reduciendo la
-cantidad de pasos que conducen a estimar la $VE$.  Esta prueba de usuario esta 
+cantidad de pasos que conducen a estimar la $VE$.  Esta prueba de usuario está 
 diseñada para evaluar la funcionalidad, usabilidad y documentación del 
 paquete, así como detectar errores provenientes del proceso de refactorización.
 
 ## Instrucciones
 
-Para iniciar por favor cargue el paquete y el conjunto de datos de pruebas 
+Para iniciar por favor cargue el paquete y el conjunto de datos de prueba 
 ejecutando los comandos que se muestran a continuación.
 
 ```{r}
@@ -33,13 +33,11 @@ head(cohortdata)
 ```
 
 Esta tabla contiene información de una epidemia simulada de un virus respiratorio ocurrida en 2044  sobre una población hipotética, compuesta por 100.000 habitantes, que recibió 
-dos dosis de una vacuna para disminuir el riesgo de muerte. Sobre esta población se realizó seguimiento por 1 año,
-entre el 1 de enero y 31 de diciembre de 2044.
+dos dosis de una vacuna para disminuir el riesgo de muerte. Sobre esta población se realizó seguimiento por 1 año, entre el 1 de enero y 31 de diciembre de 2044.
 
-En el conjunto de datos se presenta la información desagregada de primera y segunda dosis (`vaccine_date1`, `vaccine_date2`, `vaccine1` y `vaccine1`) para cada uno de los participantes, junto con información demográfica relevante (`sex` y `age`). Todos los participantes tienen asignado un `id` anónimo, como es usual en este tipo de estudios. Adicionalmente, se presentan las fechas de dos desenlaces, muerte asociada a la enfermedad respiratoria en cuestión (`death_date`) y muerte por otras causas `death_other_causes`.
+En el conjunto de datos se presenta la información desagregada de primera y segunda dosis (`vaccine_date1`, `vaccine_date2`, `vaccine1` y `vaccine1`) para cada uno de los participantes, junto con información demográfica relevante (`sex` y `age`). Todos los participantes tienen asignado un `id` anónimo, como es usual en este tipo de estudios. Adicionalmente, se presentan las fechas de dos desenlaces, muerte asociada a la enfermedad respiratoria en cuestión (`death_date`) y muerte por otras causas `death_other_causes`. El tiempo de respuesta inmune que se asume tras la vacuna es de 15 días. 
 
 ### Objetivos
-
 
 Su tarea es estimar la $VE$ de la segunda dosis aplicada para evitar la ocurrencia de muerte por enfermedad respiratoria y analizar los resultados.
 
@@ -50,11 +48,11 @@ En su proceso de análisis debe desarrollar las siguientes dos estrategias:
 
 2. Estimación con emparejamiento para controlar por potenciales factores de confusión asociados a las características propias de los sujetos. En este punto recuerde evaluar el efecto de distintas formas de emparejamiento (características  exactas "Exact" vs. características cercanas "Nearest")
 
-**Finalmente, reporte y justifique cuál es la estimación de la $VE$ después de la segunda dosis para muerte por enfermedad respiratoria**.
+**Finalmente, reporte la efectividad al final del periodo de seguimiento y a 90 y 180 días desde el inicio del seguimiento, y justifique cuál es la estimación de la $VE$ después de la segunda dosis para muerte por enfermedad respiratoria**.
 
 Por favor utilice la documentación del paquete para guiarse. Para cargar la ayuda principal, ejecute en su consola el siguiente comando.
 
-```{r}
+```{r, eval = FALSE}
 vignette("vaccineff")
 ```
 
@@ -63,7 +61,7 @@ que lo guiará paso a paso en esta labor. Recuerde que también puede acceder a
 la documentación de cada función haciendo uso de la convención
 `?<nombre de la función>`.
 
-```{r}
+```{r, eval = FALSE}
 ?make_vaccineff_data
 ```
 
@@ -71,21 +69,21 @@ Si usted tiene problemas durante la instalación del paquete o ejecución de alg
 
 ### Desarrollo de la prueba
 
-Para el desarrollo de esta prueba cuenta con 45 minutos a 1 hora.
+Para el desarrollo de esta prueba cuenta con 30 minutos.
 
 ### Discusión
 
 Al finalizar la etapa de desarrollo, el instructor guiará la discusión de
 los resultados. Los participantes socializarán brevemente los hallazgos, y los
-desafíos y preguntas surgidas durante la ejecución.
+desafíos y preguntas surgidas durante la ejecución. Para esto se cuenta con 20 minutos.
 
 ### Encuesta y retroalimentación
 
 Al finalizar, usted deberá diligenciar la encuesta enviada a su correo previamente. Este proceso no le tomará más de 10 minutos. Gracias!
 
-Le recomendamos visitar el repositorio en Github del paquete y marcar
-como favorito para estar atento a nuevos releases y potencialmente contribuir
-en el desarrollo del mismo. Epiverse-trace es una comunidad que busca la
+Le recomendamos visitar el repositorio en [Github](https://github.com/epiverse-trace/vaccineff) 
+del paquete y marcar como favorito para ser notificado de nuevos releases y contribuir
+en el desarrollo del mismo. [Epiverse-trace](https://github.com/epiverse-trace) es una comunidad que busca la
 constante comunicación entre equipos de desarrollo y usuarios.
 
 
