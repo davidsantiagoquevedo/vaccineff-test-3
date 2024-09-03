@@ -1,6 +1,6 @@
 ---
 title: "vaccineff - Prueba de usuario #3"
-author: "David Santiago Quevedo, Erika J. Cantor"
+author: "David Santiago Quevedo, Erika J. Cantor, Zulma M. Cucunubá"
 date: "2024-09-03"
 output: pdf_document
 ---
