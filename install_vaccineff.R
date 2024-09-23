@@ -9,3 +9,5 @@ remotes::install_github("epiverse-trace/vaccineff",
 
 library(vaccineff)
 vignette("vaccineff")
+vignette("cohort_design")
+vignette("other_designs")
